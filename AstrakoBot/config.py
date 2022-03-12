@@ -30,8 +30,8 @@ class Config(object):
     ALLOW_CHATS = True
 
     # RECOMMENDED
-    SQLALCHEMY_DATABASE_URI = "something://somewhat:user@hosturl:port/databasename"  # needed for any database modules
-    DB_NAME = "databasename"  # needed for cron_jobs module, use same databasename from SQLALCHEMY_DATABASE_URI
+    SQLALCHEMY_DATABASE_URI = "postgresql://postgres:4edwVOdl4VUeCJTYnJuL@containers-us-west-19.railway.app:6086/railway"  # needed for any database modules
+    DB_NAME = "railway"  # needed for cron_jobs module, use same databasename from SQLALCHEMY_DATABASE_URI
     LOAD = []
     NO_LOAD = ["rss", "cleaner", "connection", "math"]
     WEBHOOK = False
