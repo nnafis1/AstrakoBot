@@ -548,7 +548,11 @@ def fed_admin(update: Update, context: CallbackContext):
     else:
         text += "\n🔱 Admin:\n"
         for x in members:
-            user = bot.get_chat(x)
+            try:
+                user = bot.get_chat(x)
+            except BadRequest as excp:
+                if excp.message in FBAN_ERRORS:
+                    pass
             name = user.first_name or 'Deleted'
             text += " • {}\n".format(mention_html(user.id, user.first_name))
 
@@ -1574,6 +1578,7 @@ def fed_chats(update: Update, context: CallbackContext):
     bot, args = context.bot, context.args
     chat = update.effective_chat
     user = update.effective_user
+    chat_name = ""
 
     if chat.type == "private":
         send_message(
@@ -1615,7 +1620,10 @@ def fed_chats(update: Update, context: CallbackContext):
                 )
             )
             continue
-        text += " • {} (<code>{}</code>)\n".format(chat_name, chats)
+        except BadRequest as excp:
+            if excp.message in FBAN_ERRORS:
+                pass
+            text += " • {} (<code>{}</code>)\n".format(chat_name, chats)
 
     try:
         update.effective_message.reply_text(text, parse_mode=ParseMode.HTML)
