@@ -81,7 +81,7 @@ if ENV:
     SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None)
     SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None)
     WEATHER_API = os.environ.get("WEATHER_API", None)
-    PRIVATEBIN_INSTANCE = os.environ.get('PRIVATEBIN_INSTANCE', 'https://bin.0xfc.de/')
+    
 
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
     BACKUP_PASS = os.environ.get("BACKUP_PASS", True)
