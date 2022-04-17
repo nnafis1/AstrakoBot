@@ -1,0 +1,8 @@
+{
+  "name": "Astrakobot",
+  "description": "Telegram Bot to manage groups",
+  "repository": "https://github.com/alberteinstein42/MsGSuite-Bot",
+  "logo": "https://avatars.githubusercontent.com/u/80416370?v=4",
+  "keywords": ["python", "express", "heroku", "Astrakobot", "Bot"],
+  "image": "heroku/nodejs"
+}
