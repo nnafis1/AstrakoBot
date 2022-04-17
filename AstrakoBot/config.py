@@ -1,9 +1,4 @@
-Skip to content
-nnafis1/gist:25475a4c70f95c58dd503e09dda599ff Secret
-Created 20 minutes ago
- Code
- Revisions 1
-gistfile1.txt
+
 
 # Create a new config.py or rename this to config.py file in same dir and import, then extend this class.
 import json
